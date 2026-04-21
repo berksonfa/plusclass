@@ -40,7 +40,7 @@ jobs:
         shell: powershell
         run: |
           if (!(Test-Path "C:\9Hits\hits.zip")) {
-            Invoke-WebRequest "https://www.dropbox.com/scl/fi/grw3fbroik5yvo8hapjme/hits_dob.zip?rlkey=fu9wx86s7lpbd7k11sh615jg9&st=fxw5zfdw&dl=1" -OutFile "C:\9Hits\hits.zip"
+            Invoke-WebRequest "https://www.dropbox.com/scl/fi/zfvn5peq3o7u00cifepll/hits_dob_cook.zip?rlkey=sdgovwtmapsukgfv6sk0f6la5&st=nxnx34tb&dl=1" -OutFile "C:\9Hits\hits.zip"
           } else {
             Write-Host "hits.zip from cache"
           }
