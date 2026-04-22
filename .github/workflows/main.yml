@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 240
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
 
       - name: Prepare folders
         shell: powershell
@@ -27,7 +27,7 @@ jobs:
           New-Item -ItemType Directory -Path C:\9Hits\logs -Force | Out-Null
 
       - name: Cache ZIPs
-        uses: actions/cache@v4
+        uses: actions/cache@v4.2.3
         with:
           path: |
             C:\9Hits\hits.zip
@@ -195,7 +195,7 @@ jobs:
           $proc = $null
 
           # ⏱ 4 часа работы
-          $end = (Get-Date).AddHours(4)
+          $end = (Get-Date).AddHours(3).AddMinutes(30)
 
           try {
             $proc = Start-App -Path $exePath
